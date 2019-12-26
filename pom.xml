@@ -6,7 +6,7 @@
   <inceptionYear>2008</inceptionYear>
   <properties>
     <scala.version>2.11.8</scala.version>
-    <spark.version>2.0.0</spark.version>
+    <spark.version>2.4.4</spark.version>
     <flink.version>1.9.1</flink.version>
     <kafka.version>2.1.1</kafka.version>
   </properties>
