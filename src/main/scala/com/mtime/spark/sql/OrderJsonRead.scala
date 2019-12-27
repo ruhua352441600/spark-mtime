@@ -1,9 +1,7 @@
 package com.mtime.spark.sql
 
-
-import com.google.gson.JsonParser
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.types.{ArrayType, IntegerType, LongType, MapType, StringType, StructField, StructType}
+import org.apache.spark.sql.types.{ArrayType, LongType, StringType, StructType}
 
 object OrderJsonRead {
 
@@ -122,11 +120,12 @@ object OrderJsonRead {
     })
 
     //查询SQL
-    val sqlDF = spark.sql("select ticketPayInfo.payValue, " +
-      "                                    getArraySum(ticketPayInfo.payValue) payAmount," +
-      "                                    ticketPayInfo.payCode," +
-      "                                    getPayMode(ticketPayInfo.payCode,ticketPayInfo.payValue) payCode " +
-      "                               from orders")
+    val sqlDF = spark.sql("""
+                                    select cinemaInnerCode,
+                                           count(*) cnt
+                                      from orders
+                                     group by cinemaInnerCode
+                                   """)
     sqlDF.show()
     spark.stop()
   }

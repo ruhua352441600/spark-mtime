@@ -11,7 +11,9 @@
       <w>iter</w>
       <w>jdbc</w>
       <w>kafkaprops</w>
+      <w>kryoserializer</w>
       <w>mporder</w>
+      <w>mtime</w>
       <w>uturn</w>
       <w>wordcount</w>
     </words>

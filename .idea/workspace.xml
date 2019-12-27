@@ -7,13 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a795a4af-7b79-4df1-bfac-3f7236832652" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/SparkSessionSingleton.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/utils/MysqlConnectionPool.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Mtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Mtime.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aqw_mporder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pos_transfer_sync" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pos_uturn_ticket_order" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/sql/OrderJsonRead.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/sql/OrderJsonRead.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/sql/TicketOrderSales.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/sql/ExplodeOrderArray.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/TicketOrdersSales.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/TicketOrdersSales.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$$anonfun$main$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$$anonfun$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$$anonfun$main$2$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$$anonfun$main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$$typecreator1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$$typecreator2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$$typecreator3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$$typecreator4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/JsonRead.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales$$anonfun$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales$$anonfun$main$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales$$anonfun$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales$$typecreator1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales$$typecreator2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/TicketOrderSales.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +135,7 @@
       </method>
     </configuration>
     <configuration name="TicketOrderSales" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.mtime.spark.sql.TicketOrderSales" />
+      <option name="MAIN_CLASS_NAME" value="com.mtime.spark.sql.ExplodeOrderArray" />
       <module name="spark-mtime" />
       <extension name="coverage">
         <pattern>
@@ -193,10 +216,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1230" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1577167300538">
+    <state x="-1230" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1577437288888">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1230" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577167300538" />
+    <state x="-1230" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577437288888" />
     <state x="-1239" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576131032432">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -218,22 +241,22 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1186" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576141969782" />
-    <state width="1183" height="269" key="GridCell.Tab.0.bottom" timestamp="1577239738464">
+    <state width="1179" height="208" key="GridCell.Tab.0.bottom" timestamp="1577411567398">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1183" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577239738464" />
-    <state width="1183" height="269" key="GridCell.Tab.0.center" timestamp="1577239738463">
+    <state width="1179" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577411567398" />
+    <state width="1179" height="208" key="GridCell.Tab.0.center" timestamp="1577411567398">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1183" height="269" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577239738463" />
-    <state width="1183" height="269" key="GridCell.Tab.0.left" timestamp="1577239738463">
+    <state width="1179" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577411567398" />
+    <state width="1179" height="208" key="GridCell.Tab.0.left" timestamp="1577411567397">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1183" height="269" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577239738463" />
-    <state width="1183" height="269" key="GridCell.Tab.0.right" timestamp="1577239738463">
+    <state width="1179" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577411567397" />
+    <state width="1179" height="208" key="GridCell.Tab.0.right" timestamp="1577411567398">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1183" height="269" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577239738463" />
+    <state width="1179" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577411567398" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1576145484024">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

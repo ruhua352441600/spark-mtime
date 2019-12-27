@@ -4,7 +4,7 @@ import com.google.gson.JsonParser
 import org.apache.spark.sql.{Row, SaveMode, SparkSession}
 import org.apache.spark.sql.types.{StringType, StructField, StructType}
 
-object TicketOrderSales {
+object ExplodeOrderArray {
 
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
