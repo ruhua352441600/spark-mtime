@@ -466,7 +466,7 @@ object ProSaleRealTimeBoxOffice {
   }
 
   /**
-   * 解析座位图信息为json对象
+   * 解析消息信息为json对象
    */
   def parseRecord(msg: String): (String, JSONObject) = {
     val json: JSONObject = JSON.parseObject(msg)
