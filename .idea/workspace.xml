@@ -7,25 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a795a4af-7b79-4df1-bfac-3f7236832652" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Mtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Mtime.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/core/ParseJSON.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/core/ParseJSON.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/sql/ExplodeOrderArray.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/sql/ExplodeOrderArray.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON$$anonfun$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON$$anonfun$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$main$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$main$1$$anonfun$apply$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$typecreator1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$typecreator1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$typecreator2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$typecreator2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
