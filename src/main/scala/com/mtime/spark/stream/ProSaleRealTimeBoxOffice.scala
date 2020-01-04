@@ -1,5 +1,6 @@
 package com.mtime.spark.stream
 
+import java.io
 import java.sql.Connection
 import java.text.SimpleDateFormat
 import java.util.{Calendar, Date, Properties}
@@ -85,10 +86,15 @@ object ProSaleRealTimeBoxOffice {
     // Initial state RDD for mapWithState operation
     val sparkSession = SparkSessionSingleton.getInstance(ssc.sparkContext.getConf)
     //初始化MySQL中数据
+<<<<<<< HEAD
     val initialRDD = ssc.sparkContext.parallelize(initialRDDFromDB(sparkSession)).map(parseRecord(_))
     //initialRDD.foreach(println)
     //构建Kafka消费者启动参数
     val kafkaParams = Map("bootstrap.servers" -> zkConnect,
+=======
+    //val initialRDD = ssc.sparkContext.parallelize(initialRDDFromDB(sparkSession)).map(parseRecord(_))
+    val kafkaParams: Map[String, io.Serializable] = Map("bootstrap.servers" -> zkConnect,
+>>>>>>> 15cf78d468e000b58d7f1776807c547a24c5f85b
       "group.id"->consumer_group_id,
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],

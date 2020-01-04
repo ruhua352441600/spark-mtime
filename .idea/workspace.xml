@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a795a4af-7b79-4df1-bfac-3f7236832652" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/aa" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/aa" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
@@ -30,6 +31,9 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/SparkSessionSingleton$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/SparkSessionSingleton$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/utils/MysqlConnectionPool$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/utils/MysqlConnectionPool$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" afterDir="false" />
+>>>>>>> 15cf78d468e000b58d7f1776807c547a24c5f85b
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
