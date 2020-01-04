@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a795a4af-7b79-4df1-bfac-3f7236832652" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/aa" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/aa" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
@@ -31,9 +30,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/SparkSessionSingleton$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/SparkSessionSingleton$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/utils/MysqlConnectionPool$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/utils/MysqlConnectionPool$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" afterDir="false" />
->>>>>>> 15cf78d468e000b58d7f1776807c547a24c5f85b
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,17 +87,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Mtime\IdeaProjects\spark-mtime" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.mtime" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mtime\IdeaProjects\spark-mtime\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mtime.spark.stream" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Mtime\IdeaProjects\spark-mtime\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mtime\IdeaProjects\spark-mtime" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ProSaleRealTimeBoxOffice">
@@ -254,26 +250,26 @@
     </state>
     <state x="-1186" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577777088161" />
     <state x="734" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1577945304954" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1578022808390">
+    <state width="1877" height="383" key="GridCell.Tab.0.bottom" timestamp="1578104023129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="366" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577781070048" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1578022808390">
+    <state width="1877" height="383" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578104023129" />
+    <state width="1877" height="383" key="GridCell.Tab.0.center" timestamp="1578104023129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="366" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577781070047" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1578022808389">
+    <state width="1877" height="383" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578104023129" />
+    <state width="1877" height="383" key="GridCell.Tab.0.left" timestamp="1578104023129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="366" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577781070047" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808389" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1578022808390">
+    <state width="1877" height="383" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578104023129" />
+    <state width="1877" height="383" key="GridCell.Tab.0.right" timestamp="1578104023129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="366" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577781070047" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
+    <state width="1877" height="383" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578104023129" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1578022808391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
