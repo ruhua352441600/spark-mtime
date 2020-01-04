@@ -14,6 +14,7 @@ object SparkSessionSingleton {
         .builder
         .config(sparkConf)
         .config("spark.sql.shuffle.partitions", "50")
+          .config("spark.sql.warehouse.dir", "file:///C:/Users/Mtime/IdeaProjects/spark-mtime")
         .getOrCreate()
     }
     instance

@@ -7,25 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a795a4af-7b79-4df1-bfac-3f7236832652" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Mtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Mtime.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/spark_mtime_jar/spark-mtime_jar.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/aa" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/aa" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/core/ParseJSON.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/core/ParseJSON.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/sql/ExplodeOrderArray.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/sql/ExplodeOrderArray.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON$$anonfun$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON$$anonfun$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/core/ParseJSON.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$main$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$main$1$$anonfun$apply$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$anonfun$main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$typecreator1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$typecreator1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$typecreator2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$$typecreator2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/SparkSessionSingleton.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/SparkSessionSingleton.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/utils/MysqlConnectionPool.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/mtime/spark/utils/MysqlConnectionPool.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aa" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aa" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/sql/ExplodeOrderArray$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$$anonfun$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/SparkSessionSingleton$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/stream/SparkSessionSingleton$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtime/spark/utils/MysqlConnectionPool$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtime/spark/utils/MysqlConnectionPool$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +80,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../javaPro" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19195402" />
@@ -96,7 +100,20 @@
       <recent name="C:\Users\Mtime\IdeaProjects\spark-mtime\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TicketOrderSales">
+  <component name="RunManager" selected="Application.ProSaleRealTimeBoxOffice">
+    <configuration name="ExplodeOrderArray" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.mtime.spark.sql.ExplodeOrderArray" />
+      <module name="spark-mtime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mtime.spark.sql.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JsonRead" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.mtime.spark.sql.OrderJsonRead" />
       <module name="spark-mtime" />
@@ -123,20 +140,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestKafka" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.mtime.spark.stream.TestKafka" />
-      <module name="spark-mtime" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mtime.spark.stream.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketOrderSales" type="Application" factoryName="Application" temporary="true">
+    <configuration name="ProSaleRealTimeBoxOffice" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.mtime.spark.stream.ProSaleRealTimeBoxOffice" />
       <module name="spark-mtime" />
       <option name="PROGRAM_PARAMETERS" value="192.168.88.124:9092,192.168.88.125:9092,192.168.88.126:9092 test1 hdfs://192.168.88.124:9000/spark/test1 true" />
@@ -165,18 +169,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.TicketOrdersSale" />
-      <item itemvalue="Application.TestKafka" />
-      <item itemvalue="Application.TicketOrderSales" />
+      <item itemvalue="Application.ProSaleRealTimeBoxOffice" />
       <item itemvalue="Application.JsonRead" />
       <item itemvalue="Application.ParseJSON" />
+      <item itemvalue="Application.ExplodeOrderArray" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TicketOrderSales" />
+        <item itemvalue="Application.ProSaleRealTimeBoxOffice" />
+        <item itemvalue="Application.TicketOrdersSale" />
+        <item itemvalue="Application.ExplodeOrderArray" />
         <item itemvalue="Application.ParseJSON" />
         <item itemvalue="Application.JsonRead" />
-        <item itemvalue="Application.TicketOrdersSale" />
-        <item itemvalue="Application.TestKafka" />
       </list>
     </recent_temporary>
   </component>
@@ -210,10 +214,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577697989797" />
-    <state x="-1590" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577699925069">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="330" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578016811195">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1590" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577699925069" />
+    <state x="-1590" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577780966409" />
+    <state x="330" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578016811195" />
     <state x="-1239" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577698895346">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -226,11 +231,12 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1231" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577693942889" />
-    <state x="-1280" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577153611918">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="640" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577845188152">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1280" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577153611918" />
     <state x="640" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575009854295" />
+    <state x="640" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577845188152" />
     <state x="-1316" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1575440054909">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -239,26 +245,47 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1181" y="399" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1575428684294" />
-    <state x="-1186" y="261" key="FileChooserDialogImpl" timestamp="1576141969782">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="734" y="261" key="FileChooserDialogImpl" timestamp="1577945304954">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1186" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1576141969782" />
-    <state width="1877" height="565" key="GridCell.Tab.0.bottom" timestamp="1577700343782">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="-1186" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577777088161" />
+    <state x="734" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1577945304954" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1578022808390">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="565" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577700343782" />
-    <state width="1877" height="565" key="GridCell.Tab.0.center" timestamp="1577700343782">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1165" height="366" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577781070048" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1578022808390">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="565" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577700343782" />
-    <state width="1877" height="565" key="GridCell.Tab.0.left" timestamp="1577700343781">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1165" height="366" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577781070047" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1578022808389">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="565" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577700343781" />
-    <state width="1877" height="565" key="GridCell.Tab.0.right" timestamp="1577700343782">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1165" height="366" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577781070047" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808389" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1578022808390">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="565" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577700343782" />
+    <state width="1165" height="366" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577781070047" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1578022808391">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808391" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1578022808390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1578022808390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1578022808390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578022808390" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1576145484024">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -271,5 +298,16 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1577151904202" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/mtime/spark/stream/ProSaleRealTimeBoxOffice.scala</url>
+          <line>100</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -61,7 +61,7 @@ object MysqlConnectionPool {
   //加载配置文件
   def loadConfig(): Properties = {
     val prop = new Properties()
-    var fis = Thread.currentThread().getContextClassLoader.getResourceAsStream("conf/db.properties")
+    var fis = Thread.currentThread().getContextClassLoader.getResourceAsStream("./db.properties")
     if (fis == null) {
       fis = Resources.getResource("./conf/db.properties").openStream
     }

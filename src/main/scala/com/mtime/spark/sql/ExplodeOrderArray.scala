@@ -22,7 +22,7 @@ object ExplodeOrderArray {
     val sc =schemaString.split(" ").map(fieldName => StructField(fieldName, StringType, true))
     val schema = StructType(sc)
     //把数据读成RDD的格式
-    val dataRdd = spark.sparkContext.textFile("hdfs://192.168.88.124:9000/wanda/ODS/pos_uturn_ticket_order/dt=2019-12-19/*")
+    val dataRdd = spark.sparkContext.textFile("hdfs://192.168.88.124:9000/wanda/ODS/pos_uturn_ticket_order/dt=*/*")
     //把Rdd切分成行
     val rowRDD = dataRdd.map(_.split("\u0001")).map(attributes => Row(attributes(0), attributes(1).trim))
     val ordersDF = spark.createDataFrame(rowRDD, schema)
@@ -39,7 +39,7 @@ object ExplodeOrderArray {
       dataList
     })
 
-    val data = spark.sql("select explode(str_to_jsonArray(data)) order from orders")
+    val data = spark.sql("select explode(str_to_jsonArray(data)) order from orders").distinct()
     //将临时结果以txt的格式保存在hdfs
     //data.coalesce(1)
     //      .write.mode(SaveMode.Overwrite)  //存储模式：覆盖

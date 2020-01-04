@@ -4,7 +4,7 @@ import java.sql.Connection
 import java.text.SimpleDateFormat
 import java.util.{Calendar, Date, Properties}
 
-import com.alibaba.fastjson.{JSON, JSONObject}
+import com.alibaba.fastjson.{JSON, JSONObject, JSONArray}
 import com.google.common.io.Resources
 import com.mtime.spark.stream.TicketOrdersSales.gsonArray
 import com.mtime.spark.utils.MysqlConnectionPool
@@ -17,6 +17,7 @@ import org.apache.spark.streaming.dstream.DStream
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import org.apache.spark.streaming.kafka010.KafkaUtils
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
+
 
 /**
  * 预售票房 实时计算程序。
@@ -78,13 +79,15 @@ object ProSaleRealTimeBoxOffice {
       System.exit(1)
     }
 
-    val ssc = new StreamingContext(sparkConf, Seconds(30))
+    val ssc = new StreamingContext(sparkConf, Seconds(5))
     ssc.checkpoint(checkpointDir)
 
     // Initial state RDD for mapWithState operation
     val sparkSession = SparkSessionSingleton.getInstance(ssc.sparkContext.getConf)
     //初始化MySQL中数据
-    //val initialRDD = ssc.sparkContext.parallelize(initialRDDFromDB(sparkSession)).map(parseRecord(_))
+    val initialRDD = ssc.sparkContext.parallelize(initialRDDFromDB(sparkSession)).map(parseRecord(_))
+    //initialRDD.foreach(println)
+    //构建Kafka消费者启动参数
     val kafkaParams = Map("bootstrap.servers" -> zkConnect,
       "group.id"->consumer_group_id,
       "key.deserializer" -> classOf[StringDeserializer],
@@ -100,42 +103,72 @@ object ProSaleRealTimeBoxOffice {
                        .filter(x=>x._1=="pos_uturn_ticket_order")
                         .map(data => gsonArray(data._2))
                          .flatMap(s=>s.toIterable)
-    //过滤数据
-    val ticketMapsCurrent: DStream[(String, JSONObject)] = records.map(parseRecord(_)).filter(msg => isNeed(msg._2))
 
-    ticketMapsCurrent.count().print()
+    //过滤数据
+    val ticketMaps: DStream[(String, (Long, Long))] = records.map(parseMsg(_)).filter(msg => isNeed(msg._2))
+      .map(x => {
+                  val operation_type = x._2.getOrDefault("isRefund","-")
+                  if (operation_type == "N"){
+                     (x._1,(1L,sumJsonArray(x._2.getJSONArray("ticketPayInfo"), "payValue")))
+                  }else {
+                     (x._1,(-1L,-sumJsonArray(x._2.getJSONArray("ticketPayInfo"), "payValue")))
+                  }
+                })
+
+    val ticketMapsCurrent = ticketMaps.reduceByKey((x,y) => (x._1+y._1, x._2+y._2))
+
+    //维度状态维护
+    val updateStateFun: (String, Option[(Long, Long)], State[(Long, Long)]) => (String, (Long, Long)) = updateSeatMapState
+
+    val stateDstream = ticketMapsCurrent.mapWithState(
+      StateSpec.function(updateStateFun)
+        .initialState(initialRDD)
+        .timeout(Seconds(108000)) //缓存30个小时的数据
+    )
+
+    //将当前信息保存到mysql中
+    stateDstream.foreachRDD { (rdd, time) =>
+      rdd.foreachPartition { partitionOfRecords =>
+        val conn = MysqlConnectionPool.getConnection.get
+        partitionOfRecords.foreach(saveToDB(_, conn))
+        MysqlConnectionPool.closeConnection(conn)
+      }
+    }
+
     ssc
   }
 
-  /**
-   * 更新座位图的状态
-   */
-  def updateSeatMapState(moviesKey: String,
-                         seatMap: Option[JSONObject],
-                         state: State[JSONObject]
-                        ): (String, JSONObject) = {
-    var newValue: JSONObject = seatMap match {
-      case None => {
-        val temp = state.get();
-        temp;
-      }
-      case _ => {
-        state.update(seatMap.get);
-        seatMap.get;
-      }
+  //计算每条支付记录的金额
+  def sumJsonArray(list: JSONArray, str: String): Long ={
+    var amt: Long = 0L
+    for(i <- 0 to list.size()-1){
+      amt += list.getJSONObject(i).getOrDefault(str,"0").toString.toLong
     }
-    val output = (moviesKey, newValue)
-    output
+    amt
   }
 
   /**
-   * 计算当前票房
+   * 更新指标
    */
-  def calcCurrentBo(sparkSession: SparkSession, batch_time: String, seat_map_DF: DataFrame): Unit = {
-    //计算实时座位图快照表
-    seat_map_DF.createOrReplaceTempView("tb_bo_real_time_preSale")
-    seat_map_DF.printSchema()
+  def updateSeatMapState(moviesKey: String,
+                         current: Option[(Long, Long)],
+                         state: State[(Long, Long)]
+                        ):(String, (Long, Long)) = {
+    var newValue: (Long, Long) = current match {
+      case None => {
+        val temp: (Long, Long)= (state.getOption().getOrElse((0L,0L))._1,state.getOption().getOrElse((0L,0L))._2)
+        temp
+      }
+      case _ => {
+        val temp: (Long, Long) = (state.getOption().getOrElse((0L,0L))._1+current.getOrElse((0L,0L))._1,
+                                  state.getOption().getOrElse((0L,0L))._2+current.getOrElse((0L,0L))._2)
+        state.update(temp)
+        temp
+      }
+    }
 
+    val output = (moviesKey, newValue)
+    output
   }
 
   /**
@@ -143,7 +176,7 @@ object ProSaleRealTimeBoxOffice {
    */
   def loadConfig(): Properties = {
     val prop = new Properties()
-    var fis = Thread.currentThread().getContextClassLoader.getResourceAsStream("conf/PreSale.properties")
+    var fis = Thread.currentThread().getContextClassLoader.getResourceAsStream("./db.properties")
     if (fis == null) {
       fis = Resources.getResource("./db.properties").openStream
     }
@@ -155,8 +188,7 @@ object ProSaleRealTimeBoxOffice {
    * 初始化历史数据
    */
   def initialRDDFromDB(sparkSession: SparkSession) = {
-    var sqlStr = config.getProperty("seat_map_init")
-    sqlStr = sqlStr.replace("#{var_date}", getBizDate())
+    var sqlStr = config.getProperty("dm_ticket_realtime")
     val prop = new Properties()
     prop.put("user", user)
     prop.put("password", passwd)
@@ -164,71 +196,61 @@ object ProSaleRealTimeBoxOffice {
   }
 
   /**
-   * 导入当日截止到目前所有的座位图信息
+   * 解析消息信息为json对象
    */
-  def impMapSeatInfo(sparkSession: SparkSession): DataFrame = {
-    val prop = new Properties()
-    prop.put("user", user)
-    prop.put("password", passwd)
-    sparkSession.read.jdbc(url, "tb_bo_real_time", prop)
+  def parseRecord(msg: String): (String, (Long, Long)) = {
+    val json: JSONObject = JSON.parseObject(msg)
+    val date_id = json.getOrDefault("date_id","-").toString
+    val show_time = json.getOrDefault("show_time","-").toString
+    val key = date_id +
+      "_" +
+      show_time +
+      "_" +
+      json.getOrDefault("cinemaInnerCode","-") +
+      "_" +
+      json.getOrDefault("movieCode", "-")
+    val temp = (json.getOrDefault("ticket_num","0").toString.toLong,
+                json.getOrDefault("ticket_amt","0").toString.toLong)
+    (key, temp)
   }
 
   /**
    * 解析消息信息为json对象
    */
-  def parseRecord(msg: String): (String, JSONObject) = {
+  def parseMsg(msg: String): (String, JSONObject) = {
     val json: JSONObject = JSON.parseObject(msg)
-    val date_id = parseBizDate(json.getOrDefault("movieShowStartTime","_").toString)
-    val show_time = parseShowTime(json.getOrDefault("movieShowStartTime","_").toString)
+    val date_id = parseBizDate(json.getOrDefault("movieShowStartTime","-").toString)
+    val show_time = parseShowTime(json.getOrDefault("movieShowStartTime","-").toString)
     val key = date_id +
-              "_" +
-              show_time +
-              "_" +
-              json.getOrDefault("cinemaInnerCode","_") +
-              "_" +
-              json.getOrDefault("movieShowStartTime", "_") +
-              "_" +
-              json.getOrDefault("movieCode", "_")
+      "_" +
+      show_time +
+      "_" +
+      json.getOrDefault("cinemaInnerCode","-") +
+      "_" +
+      json.getOrDefault("movieCode", "-")
     (key, json)
   }
 
   /**
    * 保存结果到数据库表
    */
-  def saveToDB(json: JSONObject, conn: Connection): Unit = {
+  def saveToDB(kv:(String, (Long, Long)), conn: Connection): Unit = {
     val sqlStr =
-      """REPLACE INTO tb_bo_real_time_presaletb_bo_real_time
-        |( biz_date, cinema_id, hall_id, show_time, movie_id, show_id, show_update_time
-        |, total_seat, no_sale, platform, show_status, hasmap, data_type, is_serial
-        |, date_time, appid, authorize, plan_exe_time, exe_time, exe_ret_time
+      """REPLACE INTO dm_ticket_realtime1
+        |( date_id, show_time, cinemaInnerCode, movieCode, ticket_num, ticket_amt
         |)
         |VALUES
-        | (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        | (?, ?, ?, ?, ?, ?)
       """.stripMargin
+    val keyArray = kv._1.split("_")
     try {
       val prep = conn.prepareStatement(sqlStr)
-      prep.setString(1, json.getOrDefault("biz_date", "").toString)
-      val dataType = json.getOrDefault("data_type", "").toString
-      val cinemaId = if ("3".equals(dataType)) json.getOrDefault("gov_cinema_id", "").toString else json.getOrDefault("cinema_id", "").toString
-      prep.setString(2, cinemaId)
-      prep.setString(3, json.get("hall_id").toString)
-      prep.setString(4, json.get("show_time").toString)
-      prep.setString(5, json.get("movie_id").toString)
-      prep.setString(6, json.get("show_id").toString)
-      prep.setString(7, json.getOrDefault("show_update_time", "").toString)
-      prep.setString(8, json.getOrDefault("total_seat", "").toString)
-      prep.setString(9, json.getOrDefault("no_sale", "").toString)
-      prep.setString(10, json.getOrDefault("platform", "").toString)
-      prep.setString(11, json.getOrDefault("show_status", "").toString)
-      prep.setString(12, json.getOrDefault("hasmap", "").toString)
-      prep.setString(13, dataType)
-      prep.setString(14, json.getOrDefault("is_serial", "").toString)
-      prep.setString(15, json.getOrDefault("date_time", "").toString)
-      prep.setString(16, json.getOrDefault("appid", "").toString)
-      prep.setString(17, json.getOrDefault("authorize", "").toString)
-      prep.setString(18, json.getOrDefault("plan_exe_time", "").toString)
-      prep.setString(19, json.getOrDefault("exe_time", "").toString)
-      prep.setString(20, json.getOrDefault("exe_ret_time", "").toString)
+      prep.setString(1, keyArray(0).toString)
+      prep.setString(2, keyArray(1).toString)
+      prep.setString(3, keyArray(2).toString)
+      prep.setString(4, keyArray(3).toString)
+      prep.setLong(5, kv._2._1.toString.toLong)
+      prep.setLong(6, kv._2._2.toString.toLong)
       prep.execute()
     } catch {
       case ex: Exception => ex.printStackTrace()
